@@ -1,0 +1,14 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let todo of todoArr">
+        <strong>{{todo.todoItem}}</strong>
+
+        <div>
+            <button
+            (click)="onEdit(todo)"
+            class="btn btn-block btn-outline-primary">Edit</button>
+            <button
+            (click)="onRemove(todo)"
+            class="btn btn-block btn-outline-danger mx-2">Remove</button>
+        </div>
+    </li>
+</ul>

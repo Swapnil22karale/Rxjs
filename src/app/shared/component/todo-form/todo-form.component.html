@@ -1,0 +1,20 @@
+
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="todoForm" (ngSubmit)="onAddTodo()">
+            <div class="form-group">
+                <label for="todoItem">Todo Item</label>
+                <input type="text" class="form-control" formControlName="todoItem">
+            </div>
+            <div class="form-group">
+                <button 
+                *ngIf="!isInEditMode"
+                type="submit" class="btn btn-sm btn-block btn-primary">Add Todo</button>
+                <button
+                *ngIf="isInEditMode"
+                (click)="onTodoUpdate()"
+                type="button" class="btn btn-sm btn-block btn-primary">Update Todo</button>
+            </div>
+        </form>
+    </div>
+</div>
